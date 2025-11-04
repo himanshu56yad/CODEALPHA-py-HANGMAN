@@ -21,7 +21,7 @@ def get_word_from_api():
         if response.status_code == 200:
             # The response is a JSON list, so we get the first element
             word = response.json()[0].upper()
-            print(f"Successfully fetched word from API: {word}") # For debugging
+            print(f"Successfully fetched word from API") # For debugging
             return word
         else:
             return None # Indicate failure
@@ -232,4 +232,5 @@ if __name__ == "__main__":
 if __name__ == "__main__":
     root = tk.Tk()
     app = HangmanGUI(root)
+
     root.mainloop()
